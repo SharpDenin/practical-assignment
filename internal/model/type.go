@@ -6,10 +6,10 @@ import "time"
 type TaskStatus string
 
 const (
-	StatusPending  TaskStatus = "pending"
-	StatusRunning  TaskStatus = "running"
-	StatusComplete TaskStatus = "complete"
-	StatusFailed   TaskStatus = "failed"
+	StatusPending   TaskStatus = "pending"
+	StatusRunning   TaskStatus = "running"
+	StatusCompleted TaskStatus = "completed"
+	StatusFailed    TaskStatus = "failed"
 )
 
 // Task - структура I/O bound задачи
