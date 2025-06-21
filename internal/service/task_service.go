@@ -55,9 +55,8 @@ func (s *TaskService) CreateTask(ctx context.Context) (string, error) {
 		return "", err
 	}
 
-	s.logger.Info("task created", "task_id", task.ID)
 	go func() {
-		_ = s.processTask(context.Background(), task.ID) // Используем context.Background()
+		_ = s.processTask(context.Background(), task.ID)
 	}()
 
 	return task.ID, nil
